@@ -39,7 +39,7 @@ const todos = [
   3. Return only the tasks that are not completed.
   */
   
-var incomplete = todos.filter(function (task) {
+let incomplete = todos.filter(function (task) {
   return task.completed === false;
 });
   
@@ -52,11 +52,11 @@ var incomplete = todos.filter(function (task) {
   3. Sort tasks in ascending order of priority (1 = highest).
   */
   
-var copy = [];
+let copy = [];
 for (var i = 0; i < todos.length; i++) {
   copy.push(todos[i]);
 }
-var byPriority = copy.sort(function (taskA, taskB) {
+let byPriority = copy.sort(function (taskA, taskB) {
   return taskA.priority - taskB.priority;
 });
   
@@ -69,7 +69,7 @@ var byPriority = copy.sort(function (taskA, taskB) {
   3. Change the `completed` property to `true` for every task.
   */
   
-var allCompleted = todos.map(function (task) {
+let allCompleted = todos.map(function (task) {
   return { task: task.task, completed: true, priority: task.priority };
 });
   
@@ -82,10 +82,10 @@ var allCompleted = todos.map(function (task) {
   3. Use method chaining to perform both steps together.
   */
   
-var onlyIncomplete = todos.filter(function (task) {
+let onlyIncomplete = todos.filter(function (task) {
   return task.completed === false;
 });
-var sortedIncomplete = onlyIncomplete.sort(function (taskA, taskB) {
+let sortedIncomplete = onlyIncomplete.sort(function (taskA, taskB) {
   return taskA.priority - taskB.priority;
 });
   
